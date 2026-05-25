@@ -1,0 +1,286 @@
+/* GOOGLE FONT */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#ECECEC;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#32464B;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#32464B;
+    font-size:17px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#9BBDBD;
+}
+
+/* ABOUT PAGE */
+
+.about-page{
+    width:100%;
+    min-height:85vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 8%;
+    gap:60px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:2;
+}
+
+/* IMAGE */
+
+.about-image{
+    animation:fadeRight 1.5s ease;
+}
+
+.about-image img{
+    width:360px;
+    border-radius:25px;
+    object-fit:cover;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    transition:0.5s;
+}
+
+.about-image img:hover{
+    transform:scale(1.03);
+}
+
+/* CONTENT */
+
+.about-content{
+    max-width:650px;
+    animation:fadeLeft 1.5s ease;
+}
+
+.about-content h3{
+    color:#7A8A9D;
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.about-content h1{
+    font-size:65px;
+    color:#32464B;
+    margin-bottom:20px;
+}
+
+.about-content h1 span{
+    color:#9BBDBD;
+}
+
+.about-content h2{
+    color:#7A8A9D;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.about-content p{
+    color:#5C6773;
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+/* BUTTONS */
+
+.buttons{
+    margin-top:35px;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 34px;
+    border-radius:35px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:#32464B;
+    color:white;
+    box-shadow:0 5px 20px rgba(50,70,75,0.3);
+}
+
+.btn-primary:hover{
+    background:#9BBDBD;
+    transform:translateY(-5px);
+}
+
+.btn-secondary{
+    background:#7A8A9D;
+    color:white;
+    box-shadow:0 5px 20px rgba(122,138,157,0.3);
+}
+
+.btn-secondary:hover{
+    background:#32464B;
+    transform:translateY(-5px);
+}
+
+/* BACKGROUND CIRCLES */
+
+.circle{
+    position:absolute;
+    border-radius:50%;
+    opacity:0.25;
+    z-index:1;
+}
+
+.circle1{
+    width:350px;
+    height:350px;
+    background:#32464B;
+    top:-100px;
+    right:120px;
+}
+
+.circle2{
+    width:250px;
+    height:250px;
+    background:#7A8A9D;
+    bottom:-60px;
+    left:40%;
+}
+
+.circle3{
+    width:180px;
+    height:180px;
+    background:#9BBDBD;
+    top:220px;
+    left:50px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:950px){
+
+    nav{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    nav ul{
+        gap:18px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .about-page{
+        justify-content:center;
+        text-align:center;
+        padding-top:40px;
+    }
+
+    .about-content h1{
+        font-size:45px;
+    }
+
+    .about-content h2{
+        font-size:22px;
+    }
+
+    .about-image img{
+        width:260px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .about-content h1{
+        font-size:38px;
+    }
+
+    .about-content p{
+        font-size:16px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .circle1,
+    .circle2,
+    .circle3{
+        display:none;
+    }
+
+}
